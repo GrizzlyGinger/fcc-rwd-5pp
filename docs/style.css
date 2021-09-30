@@ -1,0 +1,23 @@
+* , ::before , ::after {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	/*outline: 1px solid red;*/
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+#welcome-section {
+	height: 100vw;
+}
+
+@@media min-width: 390px {
+	#welcome-section {
+		max-width: 280px;
+	}
+}
