@@ -7,12 +7,12 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 85px;
+	scroll-padding-top: 75px;
 	font-family: "Futura", arial, sans-serif;
 }
 
 body {
-	background-image: linear-gradient(
+	background: linear-gradient(
 		90deg,
 		rgba(225,81,82,255),
 		rgb(215,121,71)
@@ -74,19 +74,75 @@ nav {
 	filter: grayscale(100%);
 }
 
-.javaScript {
-	/* filter: grayscale(100%); */
+#projects {
+	height: 92vh;
+	min-width: 700px;
+	padding-top: 25px;
+	position: relative;
+	clear: both;
+	background-color: rgb(81,92,79);
 }
 
-#projects {
-	height: 100vh;
+/* Adapted from Chris Coyier's Functional CSS Tabs Revisited: https://css-tricks.com/functional-css-tabs-revisited/ */
+.project_section {
+	float: left;
+	min-width: 33%;
+}
+
+.project_section label {
+	padding: 10px 5px;
+	position: relative;
+	border-radius: 5px;
+	background: linear-gradient(
+		90deg,
+		rgba(225,81,82,255),
+		rgb(215,121,71)
+);
+}
+
+.project_section [type="radio"] {
+	opacity: 0;
+}
+
+.project_content {
+	position: absolute;
+	top: 85px;
+	padding: 20px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.project_content > * {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease;
+}
+
+[type="radio"]:checked ~ label {
+  background: rgb(63,70,71);
+	color: rgb(215,121,71);
+  z-index: 2;
+}
+[type="radio"]:checked ~ label ~ .project_content {
+  z-index: 1;
+}
+[type="radio"]:checked ~ label ~ .project_content > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Adapted from Chris Coyier's Functional CSS Tabs Revisited: https://css-tricks.com/functional-css-tabs-revisited/ */
+
+.project_content {
+	display: grid;
 }
 
 .about {
-	height: 75vh;
+	height: 92vh;
+	background-color: rgb(81,92,79);
 }
 
-#contact {
+#connect {
 	height: 50vh;
 }
 @media min-width: 390px {
