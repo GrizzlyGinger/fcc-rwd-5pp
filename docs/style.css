@@ -7,7 +7,12 @@
 
 html {
 	scroll-behavior: smooth;
-	font-family: "Trebuchet MS", arial, sans-serif;
+	scroll-padding-top: 85px;
+	font-family: "Futura", arial, sans-serif;
+}
+
+body {
+	background-image: linear-gradient(90deg);
 }
 
 a {
@@ -22,6 +27,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+	background-color: rgb(51, 165, 237);
 	z-index: 10;
 }
 
@@ -46,9 +52,16 @@ nav {
 }
 
 #projects {
-	height: 500px;
+	height: 100vh;
 }
 
+.about {
+	height: 75vh;
+}
+
+#contact {
+	height: 50vh;
+}
 @media min-width: 390px {
 	#welcome-section {
 		max-width: 280px;
