@@ -116,7 +116,8 @@ nav {
 /* Adapted from Chris Coyier's Functional CSS Tabs Revisited: https://css-tricks.com/functional-css-tabs-revisited/ */
 .project_section {
 	float: left;
-	min-width: 25%;
+	flex-wrap: nowrap;
+	margin: 10px;
 }
 
 .project_section label {
