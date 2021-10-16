@@ -16,7 +16,7 @@ body {
 		90deg,
 		rgba(225,81,82,255),
 		rgb(215,121,71)
-);
+  );
 }
 
 h1, h2, h3 {
@@ -53,7 +53,6 @@ a > img {
 }
 
 nav {
-	top: 0;
 	position: fixed;
 	width: 100%;
 	height: 75px;
@@ -61,7 +60,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
 	background-color: rgb(63,70,71);
-	z-index: 10;
+	z-index: 1;
 }
 
 .links {
@@ -69,6 +68,7 @@ nav {
 	flex-direction: row;
 	list-style: none;
 	margin-right: 10px;
+	min-width: 300px;
 }
 
 .links > li {
@@ -76,7 +76,7 @@ nav {
 }
 
 .links > a {
-
+	padding: 0;
 }
 
 #welcome-section {
@@ -105,7 +105,7 @@ nav {
 }
 
 #projects {
-	min-height: 98vh;
+	min-height: 92vh;
 	min-width: 360px;
 	padding: 25px;
 	position: relative;
@@ -122,7 +122,7 @@ nav {
 
 .project_section label {
 	padding: 10px 5px;
-	position: relative;
+	/* position: relative; */
 	border-radius: 5px;
 	background: linear-gradient(
 		90deg,
@@ -146,6 +146,7 @@ nav {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	overflow-y: auto;
 }
 
 .project_content > * {
@@ -180,8 +181,17 @@ nav {
 #connect {
 	height: 50vh;
 }
-@media min-width: 390px {
-	#welcome-section {
-		max-width: 280px;
+
+@media (max-width: 595px) {
+	.links {
+		justify-content: space-around;
+	}
+
+	.project_section label {
+
+	}
+
+	.badge {
+		max-width: 35px;
 	}
 }
