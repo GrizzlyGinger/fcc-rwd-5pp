@@ -96,7 +96,7 @@ nav {
 	justify-content: center;
 }
 
-.badges [type="radio"] {
+.badges [type="checkbox"] {
 	display: none;
 }
 
@@ -108,6 +108,10 @@ nav {
 	transition: transform 0.3s ease-out;
 	text-align: center;
 	cursor: pointer;
+}
+
+.earned {
+	filter: none;
 }
 
 .badge img {
@@ -134,34 +138,31 @@ nav {
   transition: all 0.6s ease;
 	position: absolute;
 	top: 85px;
-	right: 0;
-	bottom: 0;
-	left: 0;
 }
 
 .badge:hover {
  	transform: translateY(-8px);
 }
 
-.badge [type="radio"]:hover ~ label {
+.badge [type="checkbox"]:hover ~ label {
 	background: inherit;
 	color: inherit;
-	filter: none;
 	transform: translateY(-8px);
 }
 
-.badge [type="radio"]:checked ~ label {
+.badge [type="checkbox"]:checked ~ label {
 	background: inherit;
 	color: inherit;
 	z-index: 2;
+	transform: translateY(-8px);
 }
 
-.badge [type="radio"]:checked ~ label ~ .descript  {
+.badge [type="checkbox"]:checked ~ label ~ .descript  {
 	opacity: 1;
 	z-index: 1;
 }
 
-.badge [type="radio"]:checked ~ label ~ .descript > * {
+.badge [type="checkbox"]:checked ~ label ~ .descript > * {
   opacity: 1;
 }
 
